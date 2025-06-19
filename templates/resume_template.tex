@@ -1,0 +1,125 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[left=0.5in,right=0.5in,top=0.5in,bottom=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage[sfdefault]{roboto}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{hyperref}
+
+% Colors
+\definecolor{headercolor}{RGB}{50,50,50}
+\definecolor{subheadercolor}{RGB}{70,70,70}
+\definecolor{accentcolor}{RGB}{100,100,100}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Section formatting
+\titleformat{\section}{\large\bfseries\color{headercolor}}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{5pt}
+
+% Subsection formatting
+\titleformat{\subsection}[runin]{\bfseries\color{subheadercolor}}{}{0em}{}[:]
+\titlespacing{\subsection}{0pt}{5pt}{3pt}
+
+% Custom commands
+\newcommand{\resumeheader}[2]{
+    \begin{center}
+        {\LARGE\bfseries\color{headercolor} #1} \\[5pt]
+        {\large\color{subheadercolor} #2}
+    \end{center}
+}
+
+\newcommand{\contactinfo}[5]{
+    \begin{center}
+        \faPhone\ #1 \quad | \quad
+        \faEnvelope\ \href{mailto:#2}{#2} \quad | \quad
+        \faLinkedin\ \href{#3}{LinkedIn} \quad | \quad
+        \faGithub\ \href{#4}{GitHub} \quad | \quad
+        \faMapMarker\ #5
+    \end{center}
+    \vspace{10pt}
+}
+
+% Remove bullet points indentation
+\setlist[itemize]{leftmargin=*, label=\textbullet, itemsep=0pt, parsep=0pt, topsep=0pt}
+
+\begin{document}
+
+% Header
+\resumeheader{{{ name }}}{{{ title }}}
+\contactinfo{{{ phone }}}{{{ email }}}{{{ linkedin }}}{{{ github }}}{{{ location }}}
+
+% Summary
+\section{SUMMARY}
+{{ summary }}
+
+% Two Column Layout
+\begin{minipage}[t]{0.48\textwidth}
+    % Education
+    \section{EDUCATION}
+    {% for edu in education %}
+    \textbf{{ edu.university }} \\
+    {{ edu.location }} | {{ edu.graduation }}{% if edu.gpa %} | {{ edu.gpa }} GPA{% endif %} \\
+    {{ edu.degree }}
+    {% if edu.abroad %}\\
+    \textit{{ edu.abroad }}{% endif %}
+    {% if not loop.last %}\vspace{8pt}{% endif %}
+    {% endfor %}
+    
+    % Skills
+    \section{SKILLS}
+    \begin{itemize}[leftmargin=0pt, label={}]
+    {% for skill in skills %}
+        \item \textbullet\ {{ skill }}
+    {% endfor %}
+    \end{itemize}
+    
+    % Languages
+    {% if languages %}
+    \section{LANGUAGES}
+    {{ languages|join(' | ') }}
+    {% endif %}
+    
+    % Certifications
+    {% if certifications %}
+    \section{CERTIFICATIONS}
+    {% for cert in certifications %}
+    \textbf{{ cert.name }} \\
+    \textit{Skills:} {{ cert.skills }} \\
+    {% if not loop.last %}\vspace{5pt}{% endif %}
+    {% endfor %}
+    {% endif %}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+    % Projects
+    \section{PROJECTS}
+    {% for project in projects %}
+    \textbf{{ project.name }} \\
+    \textit{Tools:} {{ project.tools }} \\
+    {{ project.description }}
+    {% if project.github_link %}\\
+    \href{{ project.github_link }}{[GitHub]}{% endif %}
+    {% if not loop.last %}\vspace{8pt}{% endif %}
+    {% endfor %}
+    
+    % Experience
+    \section{EXPERIENCE}
+    {% for exp in experience %}
+    \textbf{{ exp.company }} -- {{ exp.title }} \\
+    {{ exp.location }} | {{ exp.duration }} \\
+    {% if exp.tech_focus %}\textit{Technology Focus:} {{ exp.tech_focus }} \\{% endif %}
+    {% if exp.platforms %}\textit{Platforms:} {{ exp.platforms }} \\{% endif %}
+    \begin{itemize}
+    {% for bullet in exp.bullets %}
+        \item {{ bullet }}
+    {% endfor %}
+    \end{itemize}
+    {% if not loop.last %}\vspace{5pt}{% endif %}
+    {% endfor %}
+\end{minipage}
+
+\end{document}

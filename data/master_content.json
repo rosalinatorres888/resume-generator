@@ -1,0 +1,144 @@
+{
+  "personal": {
+    "name": "ROSALINA TORRES",
+    "title": "DATA ANALYTICS ENGINEER | MS CANDIDATE",
+    "email": "torres.ros@northeastern.edu",
+    "phone": "+1.774.339.2255",
+    "linkedin": "https://www.linkedin.com/in/rosalina2",
+    "github": "https://github.com/rosalinatorres888",
+    "location": "Boston, Massachusetts"
+  },
+  "summary": "Data Analytics Engineer and MS candidate with hands-on experience in machine learning, natural language processing, and data pipeline automation. Proven ability to transform complex datasets into actionable insights using Python, SQL, and cloud-based tools. Strong foundation in ethical AI evaluation, statistical modeling, and multilingual data processing. Former global sales leader with unique ability to align technical solutions with business goals.",
+  "education": [
+    {
+      "university": "NORTHEASTERN UNIVERSITY",
+      "location": "Boston, MA",
+      "degree": "MS in Data Analytics Engineering",
+      "graduation": "Expected: May 2026",
+      "gpa": "4.0"
+    },
+    {
+      "university": "BRIDGEWATER STATE UNIVERSITY",
+      "location": "Bridgewater, MA",
+      "degree": "Bachelor of Science: Economics",
+      "abroad": "Study Abroad: University of Limerick, Ireland"
+    }
+  ],
+  "skills": [
+    "Python and R Programming",
+    "Data Visualization and Storytelling",
+    "Advanced Machine Learning Algorithms",
+    "Data Preprocessing & Feature Engineering",
+    "ETL Development & Data Pipeline Automation",
+    "Data Quality & Governance",
+    "Natural Language Processing (NLP) Expertise",
+    "Deep Learning and Neural Networks",
+    "Statistical Analysis and Modeling",
+    "SQL and NoSQL Databases",
+    "Time Series Analysis",
+    "Research & Development",
+    "Curiosity and Continuous Learning",
+    "Collaboration and Teamwork",
+    "Problem Solving and Critical Thinking"
+  ],
+  "projects": [
+    {
+      "name": "Clustering Democracy Analysis",
+      "tools": "Python, Scikit-learn, PCA, K-Means, Hierarchical Clustering",
+      "description": "Applied unsupervised ML and dimensionality reduction to classify global democracy regimes. Visualized cluster insights to uncover governance trends.",
+      "github_link": "{https://github.com/rosalinatorres888/democracy-clustering-analysis}",
+      "keywords": ["clustering", "unsupervised learning", "PCA", "democracy", "data visualization"]
+    },
+    {
+      "name": "Text Mining & Word Frequency Network",
+      "tools": "Python, NLTK, Regex, Matplotlib",
+      "description": "Processed and analyzed article datasets to identify high-frequency semantic patterns. Developed visual word networks to support trend detection.",
+      "github_link": "{https://github.com/rosalinatorres888/Network-Word-FrequencyAnalysis-for-Data-Mining}",
+      "keywords": ["NLP", "text mining", "word frequency", "network analysis", "NLTK"]
+    },
+    {
+      "name": "Human Activity Monitoring with Entropy Measures",
+      "tools": "Python, Pandas",
+      "description": "Detected behavioral patterns in time-series data using permutation entropy. Applied complexity metrics to distinguish human motion phases.",
+      "github_link": "{https://github.com/rosalinatorres888/human-activity-entropy}",
+      "keywords": ["time series", "entropy", "human activity", "pattern detection"]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Alignerr (by Labelbox)",
+      "title": "AI Data Trainer, Bilingual",
+      "location": "Remote, US",
+      "duration": "2023 – Present",
+      "tech_focus": "Specialized in LLM evaluation for factual accuracy and ethical integrity",
+      "platforms": "Generative AI alignment tools and human-in-the-loop ML systems",
+      "bullets": [
+        "Labeled and evaluated outputs of large language models (LLMs) for factual accuracy, ethical integrity, and performance",
+        "Worked across generative AI alignment tools and human-in-the-loop (HITL) ML systems to refine datasets and improve model outcomes"
+      ],
+      "keywords": ["LLM", "AI ethics", "data labeling", "HITL", "generative AI"]
+    },
+    {
+      "company": "Collibra",
+      "title": "Regional Manager, Channel & Enterprise Sales",
+      "location": "Boston, MA",
+      "duration": "2021 – 2023",
+      "tech_focus": "Enterprise-wide data governance, data catalog, and data intelligence",
+      "platforms": "Data lineage, metadata management, and AI governance frameworks",
+      "bullets": [
+        "Drove enterprise sales of data intelligence solutions across LATAM, focusing on data cataloging, lineage, and metadata",
+        "Managed partnerships with AWS, GCP, and Deloitte; increased deal velocity by 30% and delivered $2.4M in ARR growth"
+      ],
+      "keywords": ["data governance", "metadata", "enterprise sales", "partnerships"]
+    },
+    {
+      "company": "ZERTO INC (acquired by HPE)",
+      "title": "Regional Sales Manager",
+      "location": "Boston, MA",
+      "duration": "2017 – 2021",
+      "tech_focus": "IT resilience platforms for cloud data protection and disaster recovery",
+      "platforms": "Enterprise-grade continuous data protection and cloud mobility",
+      "bullets": [
+        "Led cloud sales strategy across LATAM for IT resilience and disaster recovery solutions, achieving up to 257% of quota",
+        "Recognized as Global Salesperson of the Year and President's Club honoree for partner-driven revenue impact"
+      ],
+      "keywords": ["cloud", "disaster recovery", "sales", "IT resilience"]
+    },
+    {
+      "company": "Oracle Corporation",
+      "title": "Business Development Executive, Cloud, Middleware & Database",
+      "location": "Burlington, MA",
+      "duration": "2015 – 2016",
+      "tech_focus": "Database management systems, cloud infrastructure, and middleware",
+      "platforms": "Oracle Cloud Infrastructure, Database Management Systems, and Middleware Solution",
+      "bullets": [
+        "Delivered 135% of quarterly target by developing data-driven cloud adoption strategies for ISVs and SIs",
+        "Promoted Oracle Cloud Infrastructure and database solutions through tailored partner programs, earning 'Top Gun' and 'Fast Start' awards"
+      ],
+      "keywords": ["Oracle", "cloud", "database", "business development"]
+    }
+  ],
+  "languages": ["Spanish", "English", "Portuguese"],
+  "certifications": [
+    {
+      "name": "Google Data Analytics Professional Certification",
+      "skills": "SQL, R, Tableau, Data Cleaning, Data Visualization, Case Study Implementation"
+    },
+    {
+      "name": "Collibra Data Governance & Management Certification",
+      "skills": "Data Cataloging, Data Lineage, Metadata Management, Access Controls, Governance Frameworks"
+    },
+    {
+      "name": "Command of the Message & Command of the Sale Certifications (Force Management)",
+      "skills": "Sales Methodology, Value-Based Selling, Executive Conversations, Sales Qualification Frameworks"
+    },
+    {
+      "name": "AWS Cloud Practitioner Certification",
+      "skills": "AWS Cloud Fundamentals, IAM, EC2, S3, Cloud Security, Pricing Models, Cloud Architecture Principles"
+    },
+    {
+      "name": "Generative AI Specialization – Learning Path Certification (Google Cloud)",
+      "skills": "Large Language Models (LLMs), Prompt Engineering, Model Evaluation, Responsible AI, Vertex AI Basics"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Machine Learning Engineer",
+  "company": "TechCorp AI",
+  "description": "We are seeking a Machine Learning Engineer with strong Python skills and experience in NLP, deep learning, and data pipeline automation. The ideal candidate will have experience with TensorFlow/PyTorch, cloud platforms (AWS/GCP), and deploying ML models at scale. Bilingual capabilities and experience with LLM evaluation is a plus. You'll work on cutting-edge AI solutions for our global customer base.",
+  "company_goal": "leverage AI to transform how businesses make data-driven decisions",
+  "requirements": ["Python", "TensorFlow", "PyTorch", "NLP", "AWS", "SQL", "Data Pipeline", "LLM", "Deep Learning"],
+  "preferred": ["Bilingual", "Data Governance", "MLOps", "Real-time Systems"]
+}

@@ -7,6 +7,10 @@ on:
         description: 'Job description JSON file name'
         required: true
         default: 'example_job.json'
+      output_name:
+        description: 'Output name (without .pdf)'
+        required: true
+        default: 'tailored_resume'
 
 jobs:
   generate-resume:
@@ -22,11 +26,16 @@ jobs:
     
     - name: Install dependencies
       run: |
-        pip install jinja2
+        pip install -r requirements.txt
         sudo apt-get update
-        sudo apt-get install -y texlive-latex-base texlive-fonts-recommended
+        sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-latex-extra
     
     - name: Generate Resume
       run: |
-        echo "Resume generation would happen here"
-        echo "This is a placeholder for now"
+        python scripts/generate_resume.py data/job_descriptions/${{ github.event.inputs.job_file }} ${{ github.event.inputs.output_name }}
+    
+    - name: Upload Resume
+      uses: actions/upload-artifact@v3
+      with:
+        name: resume-${{ github.event.inputs.output_name }}
+        path: output/${{ github.event.inputs.output_name }}.pdf

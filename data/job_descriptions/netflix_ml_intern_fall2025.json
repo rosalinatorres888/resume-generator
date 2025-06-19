@@ -1,0 +1,34 @@
+{
+  "title": "Machine Learning Intern, Fall 2025",
+  "company": "Netflix",
+  "location": "Los Gatos, California",
+  "description": "Applied Machine Learning Research internship improving personalization algorithms, member understanding, creative tooling, and system optimization. Work on recommender systems, NLP/LLMs, computer vision, reinforcement learning, and ML infrastructure. PhD candidate preferred.",
+  "company_goal": "reinvent entertainment through cutting-edge machine learning research and personalization at massive scale",
+  "requirements": [
+    "PhD candidate in Machine Learning",
+    "Python programming",
+    "PyTorch/TensorFlow",
+    "NLP and Large Language Models",
+    "Recommender Systems", 
+    "Computer Vision",
+    "ML pipelines",
+    "GPU training",
+    "Research publications"
+  ],
+  "preferred": [
+    "Transformers for recommendations",
+    "Multi-modal ML",
+    "LLM fine-tuning",
+    "Distributed computing (Spark)",
+    "ML infrastructure",
+    "Model optimization",
+    "Explainable AI"
+  ],
+  "focus_areas": [
+    "Personalization & Recommender Systems",
+    "Natural Language Processing",
+    "Computer Vision",
+    "Reinforcement Learning",
+    "ML Platform & Infrastructure"
+  ]
+}

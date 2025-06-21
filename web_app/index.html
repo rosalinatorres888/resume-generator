@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator & Job Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <h1 class="nav-title">🚀 Career Hub</h1>
+            <div class="nav-links">
+                <button class="nav-btn active" data-tab="dashboard">Dashboard</button>
+                <button class="nav-btn" data-tab="applications">Applications</button>
+                <button class="nav-btn" data-tab="resume">Resume Builder</button>
+                <button class="nav-btn" data-tab="analytics">Analytics</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- Dashboard Tab -->
+        <div id="dashboard" class="tab-content active">
+            <div class="hero-section">
+                <h2>Welcome to Your Career Command Center</h2>
+                <p>Track applications, generate tailored resumes, and land your dream job in data engineering and ML!</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-number" id="total-applications">0</div>
+                    <div class="stat-label">Total Applications</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📅</div>
+                    <div class="stat-number" id="today-applications">0</div>
+                    <div class="stat-label">Today's Applications</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📞</div>
+                    <div class="stat-number" id="interviews">0</div>
+                    <div class="stat-label">Interviews</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💼</div>
+                    <div class="stat-number" id="response-rate">0%</div>
+                    <div class="stat-label">Response Rate</div>
+                </div>
+            </div>
+
+            <div class="daily-goal">
+                <h3>Daily Goal Progress</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="daily-progress"></div>
+                </div>
+                <p id="goal-text">Goal: Apply to 1 job today</p>
+            </div>
+
+            <div class="quick-actions">
+                <h3>Quick Actions</h3>
+                <div class="action-buttons">
+                    <button class="action-btn primary" onclick="openJobSites()">🌐 Open Job Sites</button>
+                    <button class="action-btn secondary" onclick="quickAddApplication()">⚡ Quick Add Application</button>
+                    <button class="action-btn secondary" onclick="generateResume()">📄 Generate Resume</button>
+                </div>
+            </div>
+
+            <div class="recent-applications">
+                <h3>Recent Applications</h3>
+                <div id="recent-apps-list"></div>
+            </div>
+        </div>
+
+        <!-- Applications Tab -->
+        <div id="applications" class="tab-content">
+            <div class="section-header">
+                <h2>Job Applications</h2>
+                <button class="btn primary" onclick="showAddApplicationForm()">+ Add Application</button>
+            </div>
+
+            <div class="filters">
+                <input type="text" id="search-apps" placeholder="Search companies or positions...">
+                <select id="status-filter">
+                    <option value="">All Statuses</option>
+                    <option value="applied">Applied</option>
+                    <option value="interview">Interview</option>
+                    <option value="rejected">Rejected</option>
+                    <option value="offer">Offer</option>
+                </select>
+            </div>
+
+            <div class="applications-grid" id="applications-list"></div>
+        </div>
+
+        <!-- Resume Builder Tab -->
+        <div id="resume" class="tab-content">
+            <div class="section-header">
+                <h2>AI-Powered Resume Builder</h2>
+                <p>Generate tailored resumes for specific job applications</p>
+            </div>
+
+            <div class="resume-builder">
+                <div class="job-input-section">
+                    <h3>Job Details</h3>
+                    <div class="form-group">
+                        <label>Company Name</label>
+                        <input type="text" id="resume-company" placeholder="e.g., Netflix, Google, Meta">
+                    </div>
+                    <div class="form-group">
+                        <label>Position Title</label>
+                        <input type="text" id="resume-position" placeholder="e.g., Data Engineer, ML Engineer">
+                    </div>
+                    <div class="form-group">
+                        <label>Job Description (optional)</label>
+                        <textarea id="resume-description" placeholder="Paste job description to get better tailoring..."></textarea>
+                    </div>
+                    <button class="btn primary" onclick="generateTailoredResume()">🎯 Generate Tailored Resume</button>
+                </div>
+
+                <div class="templates-section">
+                    <h3>Resume Templates</h3>
+                    <div class="template-grid">
+                        <div class="template-card" data-template="technical">
+                            <h4>Technical Focus</h4>
+                            <p>Emphasizes technical skills and projects</p>
+                        </div>
+                        <div class="template-card" data-template="business">
+                            <h4>Business Impact</h4>
+                            <p>Highlights business value and results</p>
+                        </div>
+                        <div class="template-card" data-template="research">
+                            <h4>Research Oriented</h4>
+                            <p>Perfect for ML research positions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Analytics Tab -->
+        <div id="analytics" class="tab-content">
+            <div class="section-header">
+                <h2>Application Analytics</h2>
+                <p>Track your job search progress and identify trends</p>
+            </div>
+
+            <div class="analytics-grid">
+                <div class="chart-container">
+                    <h3>Applications Over Time</h3>
+                    <canvas id="applications-chart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Success Rate by Industry</h3>
+                    <canvas id="industry-chart"></canvas>
+                </div>
+            </div>
+
+            <div class="insights-section">
+                <h3>AI Insights</h3>
+                <div id="insights-list"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Add Application Modal -->
+    <div id="add-app-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Add New Application</h2>
+            <form id="add-app-form">
+                <div class="form-group">
+                    <label>Company *</label>
+                    <input type="text" id="app-company" required>
+                </div>
+                <div class="form-group">
+                    <label>Position *</label>
+                    <input type="text" id="app-position" required>
+                </div>
+                <div class="form-group">
+                    <label>Location</label>
+                    <input type="text" id="app-location">
+                </div>
+                <div class="form-group">
+                    <label>Job URL</label>
+                    <input type="url" id="app-url">
+                </div>
+                <div class="form-group">
+                    <label>Salary Range</label>
+                    <input type="text" id="app-salary" placeholder="e.g., $80k - $120k">
+                </div>
+                <div class="form-group">
+                    <label>Notes</label>
+                    <textarea id="app-notes" placeholder="Additional notes about this application..."></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn secondary" onclick="closeModal()">Cancel</button>
+                    <button type="submit" class="btn primary">Add Application</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

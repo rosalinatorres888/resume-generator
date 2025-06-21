@@ -1,0 +1,5 @@
+data/applications.db
+scripts/__pycache__/
+*.pyc
+.DS_Store
+output/*.pdf

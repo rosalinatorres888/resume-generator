@@ -237,7 +237,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Built for data science and ML engineering students
 - Inspired by the need to streamline job applications
-- Special thanks to the Northeastern University career services
+
 
 ## 📧 Contact
 
